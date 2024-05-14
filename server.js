@@ -19,7 +19,7 @@ app.use(express.static(process.env.STATIC_DIR));
 // Настройка парсинга тела запроса для webhook
 app.post('/webhook', bodyParser.raw({ type: 'application/json' }), async (request, response) => {
   const sig = request.headers['stripe-signature'];
-  const endpointSecret = "whsec_74262271024036a49718d33d0e04ab01f877cda7acf12ea2208fe02677a004d6";
+  const endpointSecret = "";
 
   let event;
 
